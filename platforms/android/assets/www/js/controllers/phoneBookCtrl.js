@@ -12,4 +12,13 @@
     $scope.remove = function (chat) {
         Chats.remove(chat);
     };
+    //Togle the filters bar.
+    $scope.hasFilters;
+    $scope.openFilters = function (hasFilters) {
+        $scope.hasFilters = hasFilters;
+        if (hasFilters) $scope.hasFilters = false;
+        else $scope.hasFilters = true;
+
+    }
+
 })
