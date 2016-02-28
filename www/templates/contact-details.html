@@ -5,10 +5,60 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{chat.name}}"cache-view="false" hide-tabs>
-  <ion-content class="padding">
+  <!--<ion-content class="padding">
     <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
     <p>
       {{chat.lastText}}
     </p>
-  </ion-content>
+  </ion-content>-->
+
+    <ion-content overflow-scroll='false' delegate-handle="userDetailContent" on-scroll="onUserDetailContentScroll()" header-shrink scroll-event-interval="5">
+        <div class="about-header">
+            <ion-slide-box auto-play="false" show-pager="false">
+                <ion-slide data-ng-repeat="i in ['people','food','sports']">
+                    <div class="profile-media">
+                        <!--<div class="profile-details">
+                            <img ng-src="{{chat.face}}" class="img-circle profile-image">
+                            <h5 class="color-white">
+                                {{i}}
+                            </h5>
+                            <p>
+                                Some thing About {{i}}
+                            </p>
+                        </div>-->
+                        <img ng-src="{{chat.face}}" class="about-image profile-background-image" style="vertical-align:middle;">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <div class="row like-btn">
+                <div class="col text-right">
+                    <div ng-class="liked ? 'bg-color-red like-button-with-text':'bg-color-green like-button'" ng-click="like()">
+                        <i class="ion-edit color-white"></i>
+                        <span ng-if="liked">Liked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="card padding">
+            <i class="ion-ios-telephone"></i>  <span>+389 78 219 087</span>
+        </p>
+        <p class="card padding">
+            <i class="ion-ios-telephone"></i>  <span><button ui-sref="tab.inCall({userId: chat.id})">+389 78 219 087</button></span>
+            <span>the chat id is: {{chat.id}}</span>
+        </p>
+        <p class="card padding">
+            <i class="ion-ios-email"></i>  <span>+389 78 219 087</span>
+        </p>
+
+        <p class="card padding">
+            custom note.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </ion-content>
+
 </ion-view>
