@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       })
 
      .state('tab.inCall', {
-         url: '/phoneBook/inCall/:userId',
+         url: '/phoneBook/:userId/inCall/',
          views: {
              'tab-phoneBook': {
                  templateUrl: 'templates/inCall.html',
@@ -105,12 +105,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 })
 // Custom direrctive in order to hide the tabs in some views
-.directive('hideTabs', function ($rootScope) {
+.directive('hideTabs', function ($rootScope, $ionicHistory) {
     return {
+
         restrict: 'A',
         link: function ($scope, $el) {
-            $scope.$on("$ionicView.enter", function () {
+            $scope.$on("$ionicView.afterEnter", function () {
                 $rootScope.hideTabs = true;
+                console.log("view enter.  Hide the tabs");
             });
             $scope.$on("$ionicView.leave", function () {
                 $rootScope.hideTabs = false;
@@ -118,6 +120,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
     };
 })
+
 // Directive for  the profile page
 .directive('headerShrink', function ($document) {
     return {

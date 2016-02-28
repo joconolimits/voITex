@@ -34,20 +34,19 @@
                 <div class="col text-right">
                     <div ng-class="liked ? 'bg-color-red like-button-with-text':'bg-color-green like-button'" ng-click="like()">
                         <i class="ion-edit color-white"></i>
-                        <span ng-if="liked">Liked</span>
+                        <span ng-if="liked">edited</span>
                     </div>
                 </div>
             </div>
         </div>
-        <p class="card padding">
-            <i class="ion-ios-telephone"></i>  <span>+389 78 219 087</span>
+        <p class="row card padding">
+            <i class="col ion-ios-telephone"></i>  <span class="col col-90" ui-sref="tab.inCall({userId: chat.id})">+389 78 219 087</span>
         </p>
-        <p class="card padding">
-            <i class="ion-ios-telephone"></i>  <span><button ui-sref="tab.inCall({userId: chat.id})">+389 78 219 087</button></span>
-            <span>the chat id is: {{chat.id}}</span>
+        <p class="row card padding">
+            <i class="col ion-ios-telephone"></i>  <span class="col col-90" ui-sref="tab.inCall({userId: chat.id})">+389 78 219 087</span>
         </p>
-        <p class="card padding">
-            <i class="ion-ios-email"></i>  <span>+389 78 219 087</span>
+        <p class="row card padding">
+            <i class="col ion-ios-email"></i>  <span class="col col-90">mail@voitex.co</span>
         </p>
 
         <p class="card padding">

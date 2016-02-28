@@ -1,12 +1,15 @@
 /*inCall text container styling*/
 .message{
-    height: 30%;
+    height: 40%;
 }
 
-.message .card .padding{
-    overflow-y:auto;
+.buttons{
+    height: 34%;
 }
 
+.message>p{
+    overflow-y:scroll;
+}
 
 img{
   object-fit:cover;
@@ -113,7 +116,7 @@ img{
     overflow: hidden;
     clear: both;
     color: white;
-    border: 5px solid #CBD0D3;
+    border: 2.5px solid #CBD0D3;
 }
 .like-button i{
     font-size: 40px;
