@@ -1,13 +1,14 @@
-﻿<ion-view view-title="Taling to: {{user.name}}" cache-view="false" hide-tabs>
+﻿<ion-view view-title="Taling to: {{user.displayName}}" cache-view="false" hide-tabs>
     <ion-content>
         <div class="row">
             <div class="col item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
-                <img ng-src="{{user.face}}">
+                <img ng-if="user.photos !=null" ng-src="{{user.photos[0].value}}">
+                <img ng-if="user.photos ==null" src="./img/adam.jpg" />
             </div>
             <div class="col col-75">
-                <span>{{user.name}}</span>
+                <span>{{user.displayName}}</span>
                 <br />
-                <span>+389 78 233op40</span>
+                <span>{{number}}</span>
                 <br />
                 <span>mobile</span>
             </div>

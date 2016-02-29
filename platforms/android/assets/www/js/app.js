@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       })
 
      .state('tab.inCall', {
-         url: '/phoneBook/:userId/inCall/',
+         url: '/phoneBook/inCall/:userId?numberId',
          views: {
              'tab-phoneBook': {
                  templateUrl: 'templates/inCall.html',
@@ -146,3 +146,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 });
 
 var app = angular.module('starter.controllers', []);
+var appServices = angular.module('starter.services', []);

@@ -1,7 +1,12 @@
-﻿app.controller('contactDetailsCtrl', function ($scope, $stateParams, Chats, $ionicScrollDelegate, $ionicSlideBoxDelegate) {
+﻿app.controller('contactDetailsCtrl', function ($scope, $stateParams, Chats, contacts, $ionicScrollDelegate, $ionicSlideBoxDelegate) {
     $scope.chat = Chats.get($stateParams.chatId);
     console.log("in contact Details ctrl");
+    //alert("the id in the controller: " + $stateParams.chatId);
+    $scope.contact = contacts.get($stateParams.chatId);
 
+
+
+    // needed for the display of the view
     $ionicSlideBoxDelegate.update();
     $scope.onUserDetailContentScroll = onUserDetailContentScroll
     $scope.like = like
