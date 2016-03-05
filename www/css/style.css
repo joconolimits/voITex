@@ -1,4 +1,7 @@
 /*inCall text container styling*/
+#call_text{
+    width: 100%;
+}
 .message{
     height: 40%;
 }

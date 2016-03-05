@@ -14,13 +14,8 @@
             </div>
         </div>
         <div class="row message">
-            <p class="card padding">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p id="call_text" class="card padding">
+                {{callText}}
             </p>
         </div>
         <div class="row">
@@ -53,7 +48,7 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
-                    <div class="bg-color-red like-button">
+                    <div class="bg-color-red like-button" ng-click="stopCall()">
                         <i class="ion-ios-telephone color-white"></i>
                     </div>
                 </div>

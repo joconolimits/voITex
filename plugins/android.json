@@ -27,6 +27,15 @@
         },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.ionicframework.voitex954157"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.voitex954157"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.voitex954157"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.ionicframework.voitex954157"
         }
     },
     "dependent_plugins": {}
