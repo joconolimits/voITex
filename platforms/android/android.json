@@ -45,7 +45,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference default=\"16+\" name=\"xwalkVersion\" />",
+                            "xml": "<preference default=\"xwalk_core_library_beta:18+\" name=\"xwalkVersion\" />",
                             "count": 1
                         },
                         {

@@ -147,3 +147,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 var app = angular.module('starter.controllers', []);
 var appServices = angular.module('starter.services', []);
+
+

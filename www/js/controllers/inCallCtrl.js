@@ -1,4 +1,4 @@
-﻿app.controller('inCallCtrl', function ($scope, $stateParams, $state, inCallFactory, contacts) {
+﻿app.controller('inCallCtrl', function ($scope, $stateParams, $state, $urlRouter, inCallFactory, contacts) {
     console.log("in the inCallCtrl");
     console.log("the user id: " + $stateParams.userId);
     console.log("the number id: " + $stateParams.numberId);
@@ -12,6 +12,20 @@
         }//end if
     }//end for
 
+    // The block to initiate a phone call 
+    var bypassAppChooser = true;
+    window.plugins.CallNumber.callNumber(function () {
+        //success logic goes here
+        document.addEventListener("pause", onPause, false);
+
+        function onPause() {
+            // Handle the pause event
+            //We need somehow to bring the app to foreground here.
+        }
+
+    }, function () {
+        //error logic goes here
+    }, $scope.number, bypassAppChooser);
 
     //start converting text 
     inCallFactory.startCall();

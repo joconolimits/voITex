@@ -8,38 +8,14 @@
     //});
     console.log("in phone book");
     $scope.phoneContacts = contacts.all();
-    $scope.chats = Chats.all();
-    $scope.remove = function (chat) {
-        Chats.remove(chat);
-    };
+
+
     //Togle the filters bar.
-    //$scope.hasFilters;
-    //$scope.openFilters = function (hasFilters) {
-    //    $scope.hasFilters = hasFilters;
-    //    if (hasFilters) $scope.hasFilters = false;
-    //    else $scope.hasFilters = true;
-    //}
+    $scope.hasFilters;
+    $scope.openFilters = function (hasFilters) {
+        $scope.hasFilters = hasFilters;
+        if (hasFilters) $scope.hasFilters = false;
+        else $scope.hasFilters = true;
+    }
 
-    //// Get the phone  contacts
-    //document.addEventListener("deviceready", onDeviceReady, false);
-    //function onDeviceReady() {
-    //    navigator.contacts.find(
-    //    [navigator.contacts.fieldType.displayName],
-    //    gotContacts,
-    //    errorHandler);
-
-    //}
-
-    //function errorHandler(e) {
-    //    console.log("errorHandler: " + e);
-    //}
-
-    //function gotContacts(c) {
-    //    console.log("gotContacts, number of results " + c.length);
-    //    for (var i = 0, len = c.length; i < len; i++) {
-    //        //console.dir(c[i]);
-    //        var contact = c[i];
-    //        $scope.phoneContacts.push(contact);
-    //    }
-    //}
 })
