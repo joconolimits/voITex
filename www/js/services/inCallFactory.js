@@ -1,7 +1,7 @@
 ﻿//Author Jordan
 'use strict';
 
-appServices.factory('inCallFactory', ['$rootScope', function ($rootScope) {
+appServices.factory('inCallFactory', ['$rootScope', 'socket', function ($rootScope, socket) {
     
     return {
         //beagining of Annyang block
@@ -10,7 +10,7 @@ appServices.factory('inCallFactory', ['$rootScope', function ($rootScope) {
             var commands = {
                 '*val': function (val) {
                     $rootScope.callText += "\n" + val;
-
+                    socket.emit('voitexMessage', $rootScope.callText);
                     $('#call_text').animate({
                         scrollTop: $('#call_text').get(0).scrollHeight
                     }, 7000);
