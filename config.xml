@@ -50,5 +50,4 @@
   <plugin name="cordova-plugin-file" version="4.1.1" />
   <plugin name="cordova-plugin-crosswalk-webview" version="1.5.0" src="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview.git" />
   <plugin name="mx.ferreyra.callnumber" version="0.0.2" src="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
-  <plugin name="com.ubookr.plugins.calllog" version="2.0" src="https://github.com/dalyc/Cordova-CallLog-Plugin.git" />
 </widget>

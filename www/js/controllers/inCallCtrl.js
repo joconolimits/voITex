@@ -29,7 +29,7 @@
 
     //start converting text 
     inCallFactory.startCall();
-        
+     
     //end the call
     $scope.stopCall = function () {
         inCallFactory.stopCall()
