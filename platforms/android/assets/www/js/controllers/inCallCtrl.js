@@ -1,4 +1,4 @@
-﻿app.controller('inCallCtrl', function ($scope, $stateParams, $state, $urlRouter, inCallFactory, contacts) {
+﻿app.controller('inCallCtrl', function ($scope, $stateParams, $state, $ionicHistory, $urlRouter, inCallFactory, contacts) {
     console.log("in the inCallCtrl");
     console.log("the user id: " + $stateParams.userId);
     console.log("the number id: " + $stateParams.numberId);
@@ -33,8 +33,8 @@
     //end the call
     $scope.stopCall = function () {
         inCallFactory.stopCall()
-        //after call ended return to phonebook
-        $state.go('tab.phoneBook');
+        //after call ended return one state back to the profile
+        $ionicHistory.goBack(-1);
     }//end stopCall method
 
 })

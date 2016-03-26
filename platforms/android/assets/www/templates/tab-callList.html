@@ -1,6 +1,34 @@
 <ion-view view-title="call List">
   <ion-content class="padding">
     <h2>This is the call list view</h2>
+
+      <div class="row">
+          <div class="col">Last Call</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Name</div>
+          <div class="col">{{data.lastCall.cachedName}}</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Number</div>
+          <div class="col">{{data.lastCall.number}}</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Type</div>
+          <div class="col">{{callTypeDisplay(data.lastCall.type)}}</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Date</div>
+          <div class="col">{{data.lastCall.date | date}}</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Duration</div>
+          <div class="col">{{data.lastCall.duration}} seconds</div>
+      </div>
+      <div class="row">
+          <div class="col col-30 col-offset-10">Acknowledged</div>
+          <div class="col">{{(data.lastCall.new == 1 ? 'yes' : 'no')}}</div>
+      </div>
     
   </ion-content>
 </ion-view>

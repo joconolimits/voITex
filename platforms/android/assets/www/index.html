@@ -16,6 +16,8 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
       <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.2.js"></script>
+
+      <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
       <!--Annyang Library-->
@@ -37,8 +39,9 @@
     <script src="js/services.js"></script>
       <script src="js/services/contacts.js"></script>
       <script src="js/services/inCallFactory.js"></script>
+      <script src="js/services/callListFactory.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
