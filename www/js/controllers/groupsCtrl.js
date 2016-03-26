@@ -8,5 +8,6 @@
 
     $scope.IOConnect = function () {
         socket.emit('voitexMessage', 'Backend test message');
+        console.log('message to socket sent');
     }
 })
