@@ -1,5 +1,5 @@
 ﻿//Author Jordan
-
+// This does not work It needs some Hardcore Debugging. 
 appServices.factory('callListFactory', ['$q', function ($q) {
     console.log("Factory 1");
         return {
