@@ -5,9 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "voitex", "voitex.jsproj", "{F66B3B8B-78FE-4631-AF32-AE734878EFF9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{97E262CA-A310-4A9F-AE23-AB787EA56580}"
-EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "VoitexServer", "..\VoitexServer\VoitexServer.jsproj", "{44C6BA2B-C355-4DCD-9F8F-804FCCE2DB30}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "VoitexServer", "VoitexServer\VoitexServer.jsproj", "{44C6BA2B-C355-4DCD-9F8F-804FCCE2DB30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
