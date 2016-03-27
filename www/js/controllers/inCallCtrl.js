@@ -6,23 +6,16 @@
     //get the contact that we are calling
     $scope.user = contacts.get($stateParams.userId);
     // get the corect phone number of the contact we are calling
-    for (var i = 0; i < $scope.user.phoneNumbers.length; i++) {
-        if ($scope.user.phoneNumbers[i].id == $stateParams.numberId) {
-            $scope.number = $scope.user.phoneNumbers[i].value;
-        }//end if
-    }//end for
+    //for (var i = 0; i < $scope.user.phoneNumbers.length; i++) {
+    //    if ($scope.user.phoneNumbers[i].id == $stateParams.numberId) {
+    //        $scope.number = $scope.user.phoneNumbers[i].value;
+    //    }//end if
+    //}//end for
 
-    // The block to initiate a phone call 
+    // The block to initiate a phone call through the device. You need to install the call Number plugin first 
     //var bypassAppChooser = true;
     //window.plugins.CallNumber.callNumber(function () {
     //    //success logic goes here
-    //    document.addEventListener("pause", onPause, false);
-
-    //    function onPause() {
-    //        // Handle the pause event
-    //        //We need somehow to bring the app to foreground here.
-    //    }
-
     //}, function () {
     //    //error logic goes here
     //}, $scope.number, bypassAppChooser);

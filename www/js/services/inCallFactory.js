@@ -10,7 +10,9 @@ appServices.factory('inCallFactory', ['$rootScope', 'socket', function ($rootSco
             var commands = {
                 '*val': function (val) {
                     $rootScope.callText += "\n" + val;
-                    socket.emit('voitexMessage', $rootScope.callText);
+                    //Send the annyang text to the backend 
+                    socket.emit('voitexMessage', val);
+                    //Show the annyang text to the view
                     $('#call_text').animate({
                         scrollTop: $('#call_text').get(0).scrollHeight
                     }, 7000);
